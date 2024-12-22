@@ -59,9 +59,6 @@ body {
 }
 .container {
      margin: 0 auto;
-/*    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;*/
 }
 .section-container{
     max-width: 1208px;
@@ -95,7 +92,7 @@ body {
     max-width: 430px;
 }
 
-.services-list {
+.services-list, .service-area {
     display:flex;
 }
 
@@ -114,3 +111,27 @@ body {
     max-width: 172;
 }
 
+.service-area-container h2{
+    font-size: 40px;
+}
+
+.service-area-img img {
+    height: 256px;
+    min-width: 380px;
+    margin-right: 38px;
+}
+
+.service-area-description p{
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.service-area-links{
+    margin-top: 46px;
+    padding: 0;
+    list-style: none;
+}
+
+.service-area-links li{
+    margin-bottom: 10px;
+}
