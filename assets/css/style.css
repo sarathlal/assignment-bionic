@@ -121,7 +121,7 @@ body {
     margin-right: 38px;
 }
 
-.service-area-description p{
+.service-area-description p, .articles article p{
     font-size: 18px;
     line-height: 1.4;
 }
@@ -132,6 +132,42 @@ body {
     list-style: none;
 }
 
-.service-area-links li{
+.service-area-links li {
     margin-bottom: 10px;
+}
+
+.articles-wrap {
+    margin-top: 84px;
+}
+
+.articles-container h2 {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.articles article {
+    margin-bottom: 14px;
+    margin-right: 32px;
+    margin-top: 32px;
+}
+
+.articles article img{
+    width: 382px;
+    height: 254px;
+    margin-bottom: 12px;
+}
+
+.articles article .text-wrap{
+    height: 136px;
+    position: relative;
+}
+
+.articles article a{
+    position: absolute;
+    bottom: 0;
 }
