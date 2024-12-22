@@ -60,11 +60,12 @@ body {
 .container {
      margin: 0 auto;
 }
+
+/* utils */
 .section-container{
     max-width: 1234px;
     margin: 0 auto;
     padding: 0 10px 0 22px;
-/*    padding: 0 16px;*/
 }
 
 .upper-case{
@@ -78,6 +79,9 @@ body {
   font-style: normal;
 }
 
+/* utils end */
+
+/* Service section */
 .services-wrap{
     background-color: #314b58;
 }
@@ -85,7 +89,11 @@ body {
 .services-container{
     display:flex;
     justify-content: space-between;
-    max-height: 266px;
+    flex-wrap: wrap;
+}
+
+.services{
+    max-width: 780px;
 }
 
 .services-container h2, .services-container h4{
@@ -100,17 +108,17 @@ body {
     margin: 12px 0 12px 0;
 }
 
-.services{
-    max-width: 780px;
-}
-
 .location{
+    display: none;
     max-width: 430px;
 }
 
 .services-list {
     display:flex;
     column-gap: 22px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .service-item {
@@ -126,9 +134,12 @@ body {
     width: 172px;
     max-width: 172;
 }
+/* Service section end */
 
+/* Service Area section */
  .service-area {
     display:flex;
+    flex-wrap: wrap;
 }
 
 .service-area-container h2{
@@ -143,6 +154,7 @@ body {
     width: 376px;
     max-width: 376px;
     margin-right: 38px;
+    margin-bottom: 20px;
 }
 
 .service-area-description p, .articles article p{
@@ -165,7 +177,10 @@ body {
     color: #ab3c3c;
     text-decoration: none;
 }
+/* Service Area section end */
 
+
+/* Articles section */
 .articles-wrap {
     margin-top: 80px;
 }
@@ -177,9 +192,9 @@ body {
 }
 
 .articles {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 .articles article {
@@ -188,9 +203,10 @@ body {
 }
 
 .articles article img{
-    height: 254px;
-    max-height: 254px;
-    margin-bottom: 6px;
+    width: 100%;    
+/*    height: 254px;
+    max-height: 254px;*/
+    margin-bottom: 10px;
 }
 
 .articles article .text-wrap{
@@ -205,6 +221,42 @@ body {
     text-decoration: none;
     padding-bottom: 1px;
     border-bottom: 1px solid #dba9a8;
+}
+
+/* Articles section end */
+
+
+/* Medium Screens (Tablets, >= 768px) */
+@media only screen and (min-width: 768px) {
+    .service-area{
+        flex-wrap: unset;
+    }
+    .service-area-img img{
+        margin-bottom: 0;
+    }
+
+    .articles {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+/* Large Screens (Desktops, >= 1024px) */
+@media only screen and (min-width: 1024px) {
+    .articles {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+}
+
+/* Extra-Large Screens (Large Desktops, >= 1200px) */
+@media only screen and (min-width: 1200px) {
+    .services{
+        margin: 0;
+    }
+    .location{
+        display: inline-block;
+    }
 }
 
 
