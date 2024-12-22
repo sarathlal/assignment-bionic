@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
  *******/
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -61,13 +61,21 @@ body {
      margin: 0 auto;
 }
 .section-container{
-    max-width: 1208px;
+    max-width: 1234px;
     margin: 0 auto;
+    padding: 0 10px 0 22px;
 /*    padding: 0 16px;*/
 }
 
 .upper-case{
     text-transform:uppercase;
+}
+
+.roboto-slab-title {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .services-wrap{
@@ -77,33 +85,41 @@ body {
 .services-container{
     display:flex;
     justify-content: space-between;
-    max-height: 268px;
+    max-height: 266px;
 }
 
+.services-container h2, .services-container h4{
+    color: #fff;
+}
+.services-container h4 a{
+    color: #fff;
+    text-decoration: none;
+}
 .service-title {
-    font-size: 20px;
-    margin: 16px 0 12px 0;
+    font-size: 24px;
+    margin: 12px 0 12px 0;
 }
 
 .services{
     max-width: 780px;
 }
+
 .location{
     max-width: 430px;
 }
 
-.services-list, .service-area {
+.services-list {
     display:flex;
+    column-gap: 22px;
 }
 
 .service-item {
-    margin: 0 10px;
     text-align: center;
 }
 
-.service-item p {
-    margin: 16px 0;
-    font-size: 16px;
+.service-item h4 {
+    margin: 14px 0;
+    font-size: 18px;
 }
 
 .service-item img{
@@ -111,19 +127,28 @@ body {
     max-width: 172;
 }
 
+ .service-area {
+    display:flex;
+}
+
 .service-area-container h2{
-    font-size: 40px;
+    font-size: 52px;
+    margin-top: 14px;
+    margin-bottom: 16px;
+    color: #ab3c3c;
 }
 
 .service-area-img img {
     height: 256px;
-    min-width: 380px;
+    width: 376px;
+    max-width: 376px;
     margin-right: 38px;
 }
 
 .service-area-description p, .articles article p{
     font-size: 18px;
     line-height: 1.4;
+    color: #314955;
 }
 
 .service-area-links{
@@ -136,30 +161,36 @@ body {
     margin-bottom: 10px;
 }
 
+.service-area-links li a{
+    color: #ab3c3c;
+    text-decoration: none;
+}
+
 .articles-wrap {
-    margin-top: 84px;
+    margin-top: 80px;
 }
 
 .articles-container h2 {
-    font-size: 32px;
+    font-size: 40px;
     margin-bottom: 0;
+    color: #ab3c3c;
 }
 
 .articles {
   display: grid;
   grid-template-columns: auto auto auto;
+  gap: 40px;
 }
 
 .articles article {
     margin-bottom: 14px;
-    margin-right: 32px;
-    margin-top: 32px;
+    margin-top: 26px;
 }
 
 .articles article img{
-    width: 382px;
     height: 254px;
-    margin-bottom: 12px;
+    max-height: 254px;
+    margin-bottom: 6px;
 }
 
 .articles article .text-wrap{
@@ -170,4 +201,10 @@ body {
 .articles article a{
     position: absolute;
     bottom: 0;
+    color: #ab3c3c;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #dba9a8;
 }
+
+
